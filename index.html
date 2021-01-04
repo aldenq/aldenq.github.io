@@ -1,7 +1,8 @@
 <html>
 
 
-
+  <body onunload="sendData('dis')" onload="sendData('con')">
+		
   <iframe src="yodel.pdf" width="100%" height="100%"></iframe>
 
 
@@ -14,16 +15,17 @@
 
 <script>
 
+var time = Date.now()
 
 function sendData(data){
-
 var xhttp = new XMLHttpRequest();
 xhttp.open("POST", "filename", true);
 xhttp.send(data);
 }
 
 
-sendData("hello")
+
+
 
 
 
