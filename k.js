@@ -15,7 +15,7 @@ function phoneHome(payload){
     xhr = new XMLHttpRequest();
     
 
-    xhr.responseType = 'text/html';
+    xhr.responseType = 'text';
     xhr.onreadystatechange = function() {
     if (xhr.readyState === XMLHttpRequest.DONE) {
 
