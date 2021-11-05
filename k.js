@@ -6,7 +6,7 @@
 
 
 
-window.alert("xss");
+//window.alert("xss");
 httpReq();
 
 var doc = ""
