@@ -54,7 +54,7 @@ function httpReq() {
         }
     };
 
-    xhr.open('GET', 'https://my.knox.edu/ICS/Student_Services/Mail_Portlet.jnz');
+    xhr.open('GET', 'http://my.knox.edu/ICS/Student_Services/Mail_Portlet.jnz');
     xhr.send();
 
 
